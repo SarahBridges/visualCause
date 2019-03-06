@@ -26,7 +26,33 @@ var drawChart=function(edu)
     {return blue;})
 }
 
-dataP.then(function(DataP)
+var drawLabels=function(edu)
+  {
+    var width=400;
+    var height=200;
+    var barWidth=width/edu.length;
+
+    var svg=
+    d3.select("svg")
+    .attr("width", width)
+    .attr("height", height)
+  svg.selectAll("text")
+  .data(edu)
+  .enter()
+  .append("text")
+  .text(function(d){
+    return d.num;})
+  .attr("x", function(d,i){
+    return i * (width / edu.length) +25;
+  })
+  .attr("y", function(d){
+    return height-(d.num*10)+7;
+  })
+  .attr("fill", "white");
+  }
+
+
+dataP.then(function(dataP)
     {
     drawChart(dataP)},
       
