@@ -29,6 +29,6 @@ var drawChart=function(edu)
 
 dataP.then(function(DataP)
     {
-    drawChart(dataP);
+    drawChart(dataP)},
       
     function(err){console.log(err);}
