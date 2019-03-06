@@ -23,7 +23,7 @@ var drawChart = function(edu)
   .attr("height", function(d)
     {return d.num*20})
   .attr("fill", function(d)
-    {return d.colors;})
+    {return blue;})
 }
 
 DataP.then(function(DataP)
