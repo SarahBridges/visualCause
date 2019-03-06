@@ -31,4 +31,4 @@ dataP.then(function(DataP)
     {
     drawChart(dataP)},
       
-    function(err){console.log(err);}
+    function(err){console.log(err);})
