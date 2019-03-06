@@ -1,4 +1,3 @@
-var num = "2014";
 var dataP = d3.csv("edu.csv");
 
 var drawChart=function(edu)
