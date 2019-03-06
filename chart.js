@@ -1,6 +1,6 @@
 var dataP = d3.csv("edu.csv");
 
-var drawChart = function(edu)
+var drawChart=function(edu)
 {
   var width = 400;
   var height = 600;
@@ -18,16 +18,16 @@ var drawChart = function(edu)
   .attr("x", function(d,i)
     {return i*barWidth;})
   .attr("y", function(d)
-    {return height-d.num*20})
+    {return height-d.2014*20})
   .attr("width", barWidth)
   .attr("height", function(d)
-    {return d.num*20})
+    {return d.2014*20})
   .attr("fill", function(d)
     {return blue;})
 }
 
-DataP.then(function(DataP)
+dataP.then(function(DataP)
     {
-    drawChart(DataP);
+    drawChart(dataP);
       
     function(err){console.log(err);}
