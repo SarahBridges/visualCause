@@ -3,7 +3,7 @@ var dataP = d3.csv("edu.csv");
 var drawChart=function(edu)
 {
   var width=400;
-  var height=400;
+  var height=500;
   var barWidth=width/edu.length;
   console.log(height);
   
