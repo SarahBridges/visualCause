@@ -25,7 +25,7 @@ var drawChart=function(edu)
   .attr("height", function(d)
     {console.log(d);return height-d.Year})
   .attr("fill", function(d)
-    {return "blue";})
+    {return "deepskyblue";})
 }
 
 var drawLabels=function(edu)
@@ -42,7 +42,7 @@ var drawLabels=function(edu)
   .enter()
   .append("text")
   .text(function(d){
-    return d.Year;})
+    return d.CountryName, d.Year;})
   .attr("x", function(d,i){
     return i * (width / edu.length) +25;
   })
