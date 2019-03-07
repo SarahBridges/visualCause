@@ -3,7 +3,7 @@ var dataP = d3.csv("edu.csv");
 var drawChart=function(edu)
 {
   var width = 400;
-  var height = 600;
+  var height =" 600;
   var barWidth = width/edu.length;
   
   var svg=
@@ -23,7 +23,7 @@ var drawChart=function(edu)
   .attr("height", function(d)
     {return d.year*20})
   .attr("fill", function(d)
-    {return blue;})
+    {return "blue";})
 }
 
 var drawLabels=function(edu)
