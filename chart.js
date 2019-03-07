@@ -3,7 +3,7 @@ var dataP = d3.csv("edu.csv");
 var drawChart=function(edu)
 {
   var width=400;
-  var height=200;
+  var height=10000;
   var barWidth=width/edu.length;
   console.log(height);
   
@@ -23,7 +23,7 @@ var drawChart=function(edu)
      return height-d.year})
   .attr("width", barWidth)
   .attr("height", function(d)
-    {console.log(d);return height - d.Year/10})
+    {console.log(d);return height - d.Year/10000})
   .attr("fill", function(d)
     {return "blue";})
 }
