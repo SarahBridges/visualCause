@@ -47,7 +47,7 @@ var drawLabels=function(edu)
     return i * (width / edu.length) +25;
   })
   .attr("y", function(d){
-    return height-(d.Year)+10;
+    return height-(d.Year)+12;
   })
   .attr("fill", "white");
   }
