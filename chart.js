@@ -19,7 +19,7 @@ var drawChart=function(edu)
     {return i*barWidth;})
   .attr("y", function(d)
     {console.log(d);
-     return (height-d.year)*20})
+     return (height-d.year)/10000})
   .attr("width", barWidth)
   .attr("height", function(d)
     {return d.year*20})
