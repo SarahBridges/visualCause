@@ -23,7 +23,7 @@ var drawChart=function(edu)
      return height-d.year})
   .attr("width", barWidth)
   .attr("height", function(d)
-    {console.log(d);return d.Year/100})
+    {console.log(d);return height - d.Year/10})
   .attr("fill", function(d)
     {return "blue";})
 }
