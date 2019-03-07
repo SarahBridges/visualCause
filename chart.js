@@ -3,7 +3,7 @@ var dataP = d3.csv("edu.csv");
 var drawChart=function(edu)
 {
   var width=400;
-  var height=600;
+  var height=200;
   var barWidth=width/edu.length;
   console.log(height);
   
@@ -27,7 +27,7 @@ var drawChart=function(edu)
   .attr("fill", function(d)
     {return "blue";})
 }
-
+/*
 var drawLabels=function(edu)
   {
     var width=400;
@@ -53,7 +53,7 @@ var drawLabels=function(edu)
   .attr("fill", "white");
   }
 
-
+*/
 dataP.then(function(dataP)
     {
     drawChart(dataP)},
