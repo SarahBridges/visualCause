@@ -51,11 +51,29 @@ var drawLabels=function(edu)
   })
   .attr("fill", "white");
   }
-
+var drawNameLabels=function(edu)
+{
+   var width=400;
+   var height=250;
+   var barWidht=width/edu.lenth;
+  
+  var svg=d3.select("#csv")
+  .attr("width", width)
+  .attr("height", height)
+  
+  svg.selectAll("text")
+  .data(edu)
+  .enter()
+  .append("text")
+  .text(function(d){return d.CountryName;})
+  .attr("x", function(d,i){return i*(width/edu.length)+30;})
+  .attr("fill", "black");
+}
 
 dataP.then(function(dataP)
     {
     drawChart(dataP);
-    drawLabels(dataP)},
+    drawLabels(dataP);
+    drawNameLabels(dataP)},
       
     function(err){console.log(err);})
