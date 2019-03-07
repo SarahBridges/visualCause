@@ -20,10 +20,10 @@ var drawChart=function(edu)
     {return i*barWidth;})
   .attr("y", function(d)
     {
-     return height-d.Year})
+     return height-d.Year/10000})
   .attr("width", barWidth)
   .attr("height", function(d)
-    {console.log(d);return height - (d.Year/100000)})
+    {console.log(d);return height-d.Year/100000})
   .attr("fill", function(d)
     {return "blue";})
 }
